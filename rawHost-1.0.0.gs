@@ -7,18 +7,19 @@
  * 日期: 2019-06-10T15:27Z
  */
 function doGet(e) {
-  var para=e.parameter,
-  options = {
-     "async": true,
-     "crossDomain": true,
-     "method" : "GET",
-     "headers" : {
-       
-     }
-   },
-  url=para["url"],
-  response = UrlFetchApp.fetch(url,options)
-  response=response.getContentText();
-  Logger.log(response);
-  return ContentService.createTextOutput(response).setMimeType(ContentService.MimeType.JAVASCRIPT); 
+	var para = e.parameter,
+		options = {
+			"async": true,
+			"crossDomain": true,
+			"method": "GET",
+			"headers": {
+				"X-Powered-By":"Google App Script UrlFetchApp",
+				"X-AppScript-Project":"GoogleAppScript_RawHost"
+			}
+		},
+		url = para["url"],
+		response = UrlFetchApp.fetch(url, options)
+	response = response.getContentText();
+	Logger.log(response);
+	return ContentService.createTextOutput(response).setMimeType(ContentService.MimeType.JAVASCRIPT);
 }
