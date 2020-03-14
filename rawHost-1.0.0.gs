@@ -1,10 +1,7 @@
 /*
- * AppScript RAW架設  
- * 張睿玹版權所有
- * https://github.com/dwcoop/GoogleAppScript_RawHost/license.html
- * 檔案: rawHost-1.0.0.php
- * 版本: V1.0.0
- * 日期: 2019-06-10T15:27Z
+ * AppScript Host File
+ * Version: V1.0.1
+ * License: GPLv3
  */
 function doGet(e) {
 	var para = e.parameter,
